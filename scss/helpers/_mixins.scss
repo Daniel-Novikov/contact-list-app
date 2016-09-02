@@ -1,0 +1,14 @@
+@mixin transition($time) {
+	-webkit-transition: all $time ease;
+	-moz-transition: all $time ease;
+	-o-transition: all $time ease;
+	transition: all $time ease;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

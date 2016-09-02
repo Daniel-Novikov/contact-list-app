@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<ul>
+    <li ng-repeat="mystat in mystats">
+        {{mystat.letter}} : {{mystat.count}}
+        <span ng-repeat="user in mystat.users">
+            &nbsp;&nbsp;&nbsp;{{user.username}},
+        </span>
+    </li>
+</ul>

@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+<p>Search</p>
+<input type="text" ng-model="query" />
+<table class="c-table">
+    <tr class="c-table__head">
+        <td ng-click="sortBy('name')">
+            Name
+            <i class="fa" ng-class="{'fa-arrow-circle-down': reverse, 'fa-arrow-circle-up': !reverse}" ng-show="propertyName === 'name'" aria-hidden="true"></span>
+        </td>
+        <td ng-click="sortBy('username')">
+            Username
+            <i class="fa" ng-class="{'fa-arrow-circle-down': reverse, 'fa-arrow-circle-up': !reverse}" ng-show="propertyName === 'username'" aria-hidden="true"></span>
+        </td>
+        <td ng-click="sortBy('email')">
+            Email
+            <i class="fa" ng-class="{'fa-arrow-circle-down': reverse, 'fa-arrow-circle-up': !reverse}" ng-show="propertyName === 'email'" aria-hidden="true"></span>
+        </td>
+        <td ng-click="sortBy('phone')">
+            Phone
+            <i class="fa" ng-class="{'fa-arrow-circle-down': reverse, 'fa-arrow-circle-up': !reverse}" ng-show="propertyName === 'phone'" aria-hidden="true"></span>
+        </td>
+    </tr>
+    <tr class="c-table__row" ng-repeat="user in users | filter: search | orderBy:propertyName:reverse" ng-click="openContact(user.id)">
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+    </tr>
+</table>
+
+<div class="spinner" ng-show="loading">Loading</div>

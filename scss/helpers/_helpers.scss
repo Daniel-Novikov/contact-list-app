@@ -1,0 +1,25 @@
+%fl,
+.fl {
+	float: left;
+}
+
+%fr,
+.fr {
+	float: right;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.dib {
+	display: inline-block;
+}
+
+
+.rounded-box {
+    background: rgba(23,35,34,.75);
+    border-radius: .5em;
+}

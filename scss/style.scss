@@ -1,0 +1,37 @@
+//=====================
+// Base:
+//=====================
+// Boilerplate stuff
+@import 'base/normalize';
+@import 'base/bemify';
+@import 'base/fonts';
+
+//=====================
+// Helpers:
+//=====================
+// Sass tools and helpers used across the project
+@import 'helpers/variables';
+@import 'helpers/typography';
+@import 'helpers/helpers';
+@import 'helpers/mixins';
+
+//=====================
+// Layout:
+//=====================
+// Or 'partials', styles for the main sections of the layout (header, footer, and so on)
+@import 'layout/header';
+
+//=====================
+// Components:
+//=====================
+// Specific modules like a slider, a loader, a widget, or anything along those lines
+@import 'components/table';
+//@import 'components/movies-list';
+//@import 'components/video';
+
+
+//=====================
+// Vendors:
+//=====================
+// External libraries and frameworks
+@import 'vendors/font-awesome/font-awesome';
