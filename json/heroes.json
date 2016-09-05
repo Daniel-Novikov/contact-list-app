@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Batman",
+    "img": "img/avatars/bm.png",
+    "quote": "The most important thing in life is to be yourself. Unless you can be Batman. Always be Batman."
+  },
+  {
+    "id": 2,
+    "name": "Catwoman ",
+    "img": "img/avatars/cw.png",
+    "quote": "I must continue my quest to slay the red dot."
+  },
+  {
+    "id": 3,
+    "name": "Deadpool",
+    "img": "img/avatars/dp.png",
+    "quote": "Spiderman? Never heard of her!"
+  },
+  {
+    "id": 4,
+    "name": "Hulk",
+    "img": "img/avatars/hk.png",
+    "quote": "Grrr whhh aaaah grrr whaaa grrr aaaaaaaahhgggr waahhh."
+  },
+  {
+    "id": 5,
+    "name": "Harry Potter",
+    "img": "img/avatars/hp.png",
+    "quote": "If you're havin' Quidditch problems I feel bad for you son. I got 99 problems but a snitch ain't one."
+  },
+  {
+    "id": 6,
+    "name": "Iron Man",
+    "img": "img/avatars/im.png",
+    "quote": "In the fourth grade, my robotics teacher told me to build a little robot for the science fair. I finished it in a few hours and called it 'Optimus Prime'."
+  },
+  {
+    "id": 7,
+    "name": "Spiderman",
+    "img": "img/avatars/sm.png",
+    "quote": "I'm not saying I'm Spiderman. I'm just saying nobody has ever seen me and Spiderman in a room together."
+  },
+  {
+    "id": 8,
+    "name": "Wolverine",
+    "img": "img/avatars/wv.png",
+    "quote": "The only Canadian who isn't sorry."
+  },
+  {
+    "id": 9,
+    "name": "Thor",
+    "img": "img/avatars/tr.png",
+    "quote": "I'm up all night to get Loki."
+  },
+  {
+    "id": 10,
+    "name": "Wonder Women",
+    "img": "img/avatars/ww.png",
+    "quote": "I'm 'Wonder Woman'. I wonder where I left my keys, I wonder where I put my purse, I wonder where my money went."
+  }
+]

@@ -1,25 +1,12 @@
-%fl,
-.fl {
-	float: left;
+
+.color-dark {
+	color: $color-dark !important;
 }
 
-%fr,
-.fr {
-	float: right;
+.color-accent {
+	color: $color-accent !important;
 }
 
-.clearfix:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.dib {
-	display: inline-block;
-}
-
-
-.rounded-box {
-    background: rgba(23,35,34,.75);
-    border-radius: .5em;
+.color-light {
+	color: $color-light !important;
 }

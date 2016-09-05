@@ -1,23 +1,45 @@
-@include block('menu') {
+@include block('header') {
+    padding: 40px 0;
+    text-align: center;
+}
 
-    padding: 40px;
+@include block('menu') {
+    position: relative;
+    margin: 120px 0 40px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
 
-	&:hover {
-		color: $btn-hover-color;
-	}
+    @include element('logo') {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -70px;
+        z-index: 1;
+    }
 
 	@include element('item') {
-		margin: 10px;
-        a {
-            text-decoration: none;
-            padding: 30px;
+        position: relative;
+        z-index: 2;
+        display: block;
+        padding: 0 50px;
+        height: 60px;
+        min-width: 220px;
+        box-sizing: border-box;
+        transition: all 0.5s ease;
+        font-size: 13px;
+        line-height: 60px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-family: $font-label;
+        color: $color-dark;
+        border-left: 2px solid $bg-body-color;
 
-            &:hover {
-                background-color: #FBFBFB;
-            }
+        &:last-child {
+            border: none;
+        }
+
+        &:hover {
+            color: $color-accent;
         }
 	}
 }

@@ -1,26 +1,43 @@
 angular.module('app')
 
-.controller('contactListCtrl', ['$timeout', '$scope', 'Contacts', '$stateParams', '$state', function($timeout, $scope, Contacts, $stateParams, $state) {
+.controller('contactListCtrl', ['$timeout', '$scope', 'Contacts', 'Heroes', '$stateParams', '$state', function($timeout, $scope, Contacts, Heroes, $stateParams, $state) {
     $scope.title = "Contact list";
     $scope.loading = true;
 
-
     /*
-    * Getting json file\
+    * Getting json file
     * Added timeout because list loaded too quick
     */
     var timeout = 750;
+    var output = {};
 
     $timeout(function() {
-        Contacts.get().then(
-            function(response) {
-                $scope.users = response.data;
-            }
-        ).finally(
-            function() {
-                $scope.loading = false;
-            }
-        );
+        Contacts.get().then(function(response) {
+
+            var users = response.data;
+
+            Heroes.get().then(function(response2) {
+
+                var heroes = response2.data;
+
+                /*
+                * Merging Users and Heroes arrays
+                */
+                users.forEach(function (user) {
+                    heroes.forEach(function (hero) {
+                        if (parseInt(user.id) === parseInt(hero.id)) {
+
+                            user["hero"] = hero;
+                        }
+                    });
+                });
+                console.log(users);
+                $scope.users = users;
+            });
+
+        }).finally(function() {
+            $scope.loading = false;
+        });
     }, timeout);
 
 
@@ -48,8 +65,8 @@ angular.module('app')
             angular.lowercase(user.name).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
             angular.lowercase(user.username).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
             angular.lowercase(user.email).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
-            angular.lowercase(user.phone).indexOf(angular.lowercase($scope.query) || '') !== -1
-
+            angular.lowercase(user.phone).indexOf(angular.lowercase($scope.query) || '') !== -1 ||
+            angular.lowercase(user.hero.name).indexOf(angular.lowercase($scope.query) || '') !== -1
         );
     };
 

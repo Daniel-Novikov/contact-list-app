@@ -10,10 +10,11 @@
 </head>
 
 <body ng-app="app">
-    <header class="header" ng-include="'templates/header.html'"></header>
+    <div class="wrapper">
+        <header class="header" ng-include="'templates/header.html'"></header>
+        <main ui-view></main>
+    </div>
 
-    <main ui-view></main>
-    
     <script src="js/libs/jquery.min.js"></script>
     <script src="js/libs/angular.min.js"></script>
     <script src="js/libs/angular-ui-router.min.js"></script>

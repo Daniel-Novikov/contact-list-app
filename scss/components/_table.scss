@@ -1,16 +1,35 @@
 @include block('c-table') {
+    width: 100%;
+    margin: 20px 0;
 
     td {
         padding: 10px 20px;
     }
 
     @include element('head') {
-        font-weight: bold;
+
+        & > * {
+            text-align: center;
+        }
     }
 
     @include element('row') {
-        &:nth-child(2n+1){
-            background-color: darken(#fff, 3%);
+        cursor: pointer;
+        border-top: 2px solid $bg-body-color;
+        border-bottom: 2px solid $bg-body-color;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: $bg-block-color-focus;
+            transform: scale(1.02, 1.02);
+        }
+
+        & > * {
+            text-align: center;
+        }
+
+        td {
+            padding: 25px 30px;
         }
     }
 }

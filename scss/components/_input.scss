@@ -1,0 +1,16 @@
+@include block('input-block') {
+
+    input {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        font-size: 11px;
+    	letter-spacing: 3px;
+    	font-family: $font-label;
+    	color: $color-dark;
+    	text-transform: uppercase;
+        padding: 20px 30px;
+        box-sizing: border-box;
+
+    }
+}

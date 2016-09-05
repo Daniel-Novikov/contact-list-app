@@ -1,8 +1,15 @@
-<h1>{{title}}</h1>
-<p>Search</p>
-<input type="text" ng-model="query" />
+<div class="input-block">
+    <input class="block" type="text" ng-model="query" placeholder="Search..."/>
+</div>
+
 <table class="c-table">
-    <tr class="c-table__head">
+    <tr class="c-table__head label">
+        <td>
+            <span>Hero</span> label
+        </td>
+        <td>
+            <span>Hero</span> name
+        </td>
         <td ng-click="sortBy('name')">
             Name
             <i class="fa" ng-class="{'fa-arrow-circle-down': reverse, 'fa-arrow-circle-up': !reverse}" ng-show="propertyName === 'name'" aria-hidden="true"></span>
@@ -20,7 +27,9 @@
             <i class="fa" ng-class="{'fa-arrow-circle-down': reverse, 'fa-arrow-circle-up': !reverse}" ng-show="propertyName === 'phone'" aria-hidden="true"></span>
         </td>
     </tr>
-    <tr class="c-table__row" ng-repeat="user in users | filter: search | orderBy:propertyName:reverse" ng-click="openContact(user.id)">
+    <tr class="c-table__row block" ng-repeat="user in users | filter: search | orderBy:propertyName:reverse" ng-click="openContact(user.id)">
+        <td><img ng-src="{{user.hero.img}}" alt=""/></td>
+        <td>{{user.hero.name}}</td>
         <td>{{user.name}}</td>
         <td>{{user.username}}</td>
         <td>{{user.email}}</td>
@@ -28,4 +37,6 @@
     </tr>
 </table>
 
-<div class="spinner" ng-show="loading">Loading</div>
+<div class="spinner" ng-show="loading">
+    <img src="img/logo.png" alt="" />
+</div>

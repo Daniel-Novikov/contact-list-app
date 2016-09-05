@@ -1,15 +1,12 @@
-$hover-color: rgba(0,0,0,1);
-$hover-color2: rgba(255,255,255,0.85);
+$font-label: 'Open Sans', serif;
+$font-text: 'Roboto Slab', serif;
 
-$emp-color: #3EA1EC;
-$dark-grey: #333333;
+$color-dark: #454545;
+$color-accent: #e0a53f;
+$color-light: #dbdbdb;
 
-$bg-color1: #ededeb;
+$bg-body-color: #eaeaea;
+$bg-block-color: #f4f4f4;
+$bg-block-color-focus: #ffffff;
 
-$link-color: $dark-grey;
-$link-hover-color: $emp-color;
-
-$btn-color: #aaa;
-$btn-hover-color: $emp-color;
-
-$tablet-screen: 1024px;
+$wrapper-width: 1100px;
