@@ -9,6 +9,10 @@
   display: flex;
 }
 
+.Grid--wrap {
+  flex-wrap: wrap;
+}
+
 .Grid-cell {
   flex: 1;
 }

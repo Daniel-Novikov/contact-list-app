@@ -1,2 +1,26 @@
-<h1>{{user.name}}</h1>
-{{user.email}}
+<h2 class="text-center color-light">{{title}}</h2>
+
+<div class="block Grid Grid--1of2 contact">
+
+    <div class="Grid-cell contact__half contact__half--dark">
+        <img class="contact__img" ng-src="{{hero.img}}">
+        <div>
+            <p class="label label--small color-light">Catchphrase</p>
+            <p>"{{hero.quote}}"</p>
+        </div>
+    </div>
+
+    <div class="Grid-cell contact__half contact__half--light">
+        <div class="contact__name">
+            <h2>{{user.name}}</h2>
+            <p>(undercover <strong>{{hero.name}}</strong>)</p>
+        </div>
+        <div class="contact__details">
+            <p><span class="label">Phone:&nbsp;</span>{{user.phone}}</p>
+            <p><span class="label">Username:&nbsp;</span>{{user.username}}</p>
+            <p><span class="label">Email:&nbsp;</span>{{user.email}}</p>
+            <p><span class="label">Website:&nbsp;</span>{{user.website}}</p>
+            <p><span class="label">Company:&nbsp;</span>{{user.company.name}}</p>
+        </div>
+    </div>
+</div>

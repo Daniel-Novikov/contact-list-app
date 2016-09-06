@@ -26,12 +26,10 @@ angular.module('app')
                 users.forEach(function (user) {
                     heroes.forEach(function (hero) {
                         if (parseInt(user.id) === parseInt(hero.id)) {
-
                             user["hero"] = hero;
                         }
                     });
                 });
-                console.log(users);
                 $scope.users = users;
             });
 
@@ -48,9 +46,7 @@ angular.module('app')
     };
 
     $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
-        console.log(1);
         if (toState.resolve) {
-            console.log(1);
             $scope.showSpinner();
         }
     });
@@ -81,5 +77,4 @@ angular.module('app')
         $scope.propertyName = propertyName;
     };
 
-    //console.log($scope.movieId);
 }]);
