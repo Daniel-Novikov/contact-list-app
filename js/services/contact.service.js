@@ -2,7 +2,7 @@ angular.module('app')
 
 .factory('Contacts', ['$http', function($http) {
 
-    var urlBase = '/json/users.json', // 'http://jsonplaceholder.typicode.com/users',
+    var urlBase = 'json/users.json', // 'http://jsonplaceholder.typicode.com/users',
         Contacts = {};
 
     Contacts.get = function() {
