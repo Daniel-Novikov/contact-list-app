@@ -1,1 +1,3 @@
-# contact-list-app
+# Contact list app
+
+Simple contact list application

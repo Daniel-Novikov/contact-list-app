@@ -1,6 +1,10 @@
 @include block('header') {
     padding: 40px 0;
     text-align: center;
+
+    @media screen and (max-width: $wrapper-width) {
+        padding: 0;
+    }
 }
 
 @include block('menu') {
@@ -40,6 +44,11 @@
 
         &:hover {
             color: $color-accent;
+        }
+
+        @media screen and (max-width: $phone-width) {
+            min-width: 0;
+            padding: 0 35px;
         }
 	}
 }

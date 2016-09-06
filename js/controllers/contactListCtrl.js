@@ -69,7 +69,6 @@ angular.module('app')
     /*
      * Basic sort function
      */
-
     $scope.propertyName = 'name';
     $scope.reverse = false;
     $scope.sortBy = function(propertyName) {

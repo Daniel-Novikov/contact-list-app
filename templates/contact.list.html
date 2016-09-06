@@ -5,10 +5,10 @@
 <table class="c-table">
     <tr class="c-table__head label">
         <td>
-            <span>Hero</span> label
+            <span>Hero</span>&nbsp;label
         </td>
         <td>
-            <span>Hero</span> name
+            <span>Hero</span>&nbsp;name
         </td>
         <td ng-click="sortBy('name')">
             Name
@@ -29,11 +29,26 @@
     </tr>
     <tr class="c-table__row block" ng-repeat="user in users | filter: search | orderBy:propertyName:reverse" ng-click="openContact(user.id)">
         <td><img ng-src="{{user.hero.img}}" alt=""/></td>
-        <td>{{user.hero.name}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.username}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.phone}}</td>
+        <td>
+            <span class="label"><span class="color-accent">Hero</span>&nbsp;name:&nbsp;</span>
+            {{user.hero.name}}
+        </td>
+        <td>
+            <span class="label">name:&nbsp;</span>
+            {{user.name}}
+        </td>
+        <td>
+            <span class="label">username:&nbsp;</span>
+            {{user.username}}
+        </td>
+        <td>
+            <span class="label">email:&nbsp;</span>
+            {{user.email}}
+        </td>
+        <td class="c-table__phone">
+            <span class="label">phone:&nbsp;</span>
+            {{user.phone}}
+        </td>
     </tr>
 </table>
 

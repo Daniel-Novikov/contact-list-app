@@ -1,6 +1,5 @@
 angular.module('app', [
-    'ui.router',
-    'app.directives.resolveLoader'
+    'ui.router'
 ])
 
     .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider ){
